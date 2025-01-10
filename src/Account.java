@@ -1,13 +1,11 @@
 public class Account {
 //    (representerar konton)
     private String accountNumber;
-    private String name;
 //    Lönekonto eller Sparkonto
     private String accountType;
     private int saldo;
 
-    public Account(String name, int saldo, String accountType){
-        this.name = name;
+    public Account(int saldo, String accountType){
         this.saldo = saldo;
         this.accountType = accountType;
 //        Tagen ifrån stackoverflow.
@@ -19,9 +17,7 @@ public class Account {
         return accountNumber;
     }
 
-    public String getName() {
-        return name;
-    }
+
 
     public String getAccountType() {
         return accountType;
