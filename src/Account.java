@@ -27,5 +27,24 @@ public class Account {
         return saldo;
     }
 
+    public void addMoney(int cash){
+        if (cash > 0 && saldo >= cash){
+            saldo += cash;
+            System.out.println("Added: " + cash+ " to: " + accountNumber);
+        }else{
+            System.out.println("Invalid input @ addMoney");
+        }
+    }
+
+    public void removeMoney(int cash){
+        if (cash > 0 && saldo >= cash){
+            saldo -= cash;
+            System.out.println("removed: " + cash+ " to: " + accountNumber);
+        }else{
+            System.out.println("Invalid input @ removeMoney");
+        }
+    }
+
+
 
 }

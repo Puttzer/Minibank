@@ -36,14 +36,45 @@ public class Main {
                 }
             } else {
                 System.out.println("1. Visa mina konton");
-                System.out.println("2. Logga ut");
+                System.out.println("2. Sätt in pengar");
+                System.out.println("3. Ta ut pengar");
+                System.out.println("4. Logga ut");
                 int choice = scanner.nextInt();
 
                 switch (choice) {
                     case 1:
                         loggedInUser.listAccounts();
                         break;
+
                     case 2:
+                        System.out.println("Ange kontonummer:");
+                        String accountNumIn = scanner.next();
+                        System.out.println("Ange belopp att sätta in:");
+                        int cashIn = scanner.nextInt();
+                        for (int i = 0; i < loggedInUser.getKonton().size(); i++) {
+                            Account account = loggedInUser.getKonton().get(i);
+                            if (account.getAccountNumber().equals(accountNumIn)) {
+                                account.addMoney(cashIn);
+                                break;
+                            }
+                        }
+                        break;
+
+                    case 3:
+                        System.out.println("Ange kontonummer:");
+                        String acountNumOut = scanner.next();
+                        System.out.println("Ange belopp att ta ut:");
+                        int beloppUt = scanner.nextInt();
+                        for (int i = 0; i < loggedInUser.getKonton().size(); i++) {
+                            Account account = loggedInUser.getKonton().get(i);
+                            if (account.getAccountNumber().equals(acountNumOut)) {
+                                account.removeMoney(beloppUt);
+                                break;
+                            }
+                        }
+                        break;
+                    case 4:
+//                        Loggar ut user
                         loggedInUser = null;
                         break;
                 }
