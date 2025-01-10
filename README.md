@@ -5,7 +5,7 @@ Lite djupare dokumentation av vad jag gör om det behövs.
 INTE HUNNIT MED:
 
 Göra klart money transfer.
-JAg kan sätta in pengar men du får inte någon info om hur mycket är nytt osv.
+Jag kan sätta in pengar men du får inte någon info om hur mycket är nytt osv.
 Hela switch case formuläret om man kan kalla det är väldigt användar fientlig.
 
 Man ser inte liksom vilket konto man är inloggad i
